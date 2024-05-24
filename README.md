@@ -1,67 +1,69 @@
 # Rotten Tomatoes Scraper
 
-Rotten Tomatoes Scraper is a Python package for scraping movie reviews from Rotten Tomatoes. This package allows you to extract and process reviews efficiently.
+A Python package to scrape movie data from Rotten Tomatoes, including titles and reviews.
 
-## Features
+ロッテントマトから映画のレビューをスクレイピングするPythonパッケージです。
 
-- Scrape movie reviews from Rotten Tomatoes.
-- Save reviews to CSV files.
-- Process and analyze review data.
+## Features / 特徴
 
-## Installation
+- Retrieve the following fields and save them to a CSV file
+  - Title
+  - Release Date
+  - Reviewer
+  - Review Date
+  - Rating
+  - Review Text
 
-You can install the package via pip:
+- 以下のフィールドを取得しCSVファイルに保存する
+  - タイトル
+  - 公開日
+  - レビュアー
+  - レビュー日時
+  - 評価
+  - レビューテキスト
 
-```bash
+## Installation / インストール
+
+To install the package, use pip:
+
+パッケージをインストールするには、pipを使用します：
+
+```sh
 pip install rottentomatoes-scraper
 ```
 
-## Usage
+## Usage / 使い方
 
-### Command Line Interface
+After installing the package, you can use the command line interface to scrape data. Here is an example of how to use the package from the terminal:
 
-You can use the scraper directly from the command line:
+パッケージをインストールした後、コマンドラインインターフェースを使用してデータをスクレイピングできます。
 
-```bash
-rottentomatoes-scraper <movie_name>
+Set the number of movies to retrieve and the number of reviews to retrieve
+
+取得する映画数と取得するレビュー数を設定します。
+
+```sh
+rottentomatoes-scraper --count_title 20 --count_review 20
 ```
 
-### As a Python Module
+This command will first scrape 20 movie titles and then scrape 20 reviews for each of those movies.
 
-You can also use the package as a Python module:
+このコマンドは、最初に20の映画タイトルをスクレイピングし、その後各映画の20のレビューをスクレイピングします。
 
-```python
-from rottentomatoes_scraper import reviews_scraper
+## Command Line Arguments / コマンドライン引数
 
-# Scrape reviews for a specific movie
-reviews = reviews_scraper.scrape_reviews("Inception")
+- `--count_title`: Number of movie titles to scrape
+- `--count_review`: Number of reviews to scrape per movie
 
-# Process and save reviews
-import csv_handler
-csv_handler.save_to_csv(reviews, "inception_reviews.csv")
+- `--count_title`: スクレイピングする映画タイトルの数
+- `--count_review`: 各映画ごとにスクレイピングするレビューの数
+
+## Example / 例
+
+Here is an example of how to run the scraper:
+
+スクレイパーを実行する例を以下に示します：
+
+```sh
+rottentomatoes-scraper --count_title 20 --count_review 20
 ```
-
-## Files
-
-- `main.py`: Entry point for the command line interface.
-- `reviews_scraper.py`: Contains the scraping logic.
-- `csv_handler.py`: Handles CSV file operations.
-- `date_utils.py`: Utility functions for date manipulation.
-- `web_element_click.py`: Utility functions for interacting with web elements.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
-## Author
-
-Your Name - [seokcheonhwami@gmail.com](mailto:your.seokcheonhwami@gmail.com)
-
-## Acknowledgements
-
-- Inspired by the need to automate the process of scraping movie reviews.
-- Thanks to the open-source community for providing the tools and libraries that made this project possible.

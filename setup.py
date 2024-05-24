@@ -11,13 +11,11 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'rottentomatoes-scraper=rottentomatoes_scraper.main:main',  # main.pyのmain関数をエントリーポイントに指定
+            'rottentomatoes-scraper=rottentomatoes_scraper.main:main',
         ],
     },
-    url='https://github.com/HwaI12/rottentomatoes-scraper',  # GitHubリポジトリのURL
+    url='https://github.com/HwaI12/rottentomatoes-scraper',
     license='MIT',
-    author='Fami Ishikawa',
-    author_email='seokcheonhwami@gmail.com',
     description='A package to scrape reviews from Rotten Tomatoes',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
