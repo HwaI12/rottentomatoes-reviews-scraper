@@ -5,8 +5,6 @@ setup(
     version='0.1',
     packages=find_packages(),
     install_requires=[
-        'requests',  # 依存パッケージをここに記述
-        'beautifulsoup4',
         'pandas',
         'selenium',
         'webdriver_manager'
@@ -20,7 +18,7 @@ setup(
     license='MIT',
     author='Fami Ishikawa',
     author_email='seokcheonhwami@gmail.com',
-    description='A scraper for Rotten Tomatoes reviews',
+    description='A package to scrape reviews from Rotten Tomatoes',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
 )
